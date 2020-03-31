@@ -107,7 +107,7 @@ app.layout = html.Div([
                     type='text',
                     placeholder='Input country code',
                     style=style_cell,
-                    value='LT'
+                    value='US'
                 ),
             ],style={
                 'textAlign': 'center',
