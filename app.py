@@ -93,31 +93,6 @@ app.layout = html.Div([
         'color': colors['text']
         }),
     html.Div([], style={'padding':10}),
-    html.Div([
-        dcc.RadioItems(
-            id= 'chart-select',
-            options=[
-                {'label': 'BarChart', 'value': 'bar'},
-                {'label': 'Scatter', 'value': 'sca'},
-                {'label': 'Table', 'value': 'table'}
-            ],
-            value='bar',
-            style = style_cell
-        )  
-    ], style={
-            'textAlign': 'center',
-            'color': colors['text'],
-            }
-            ),
-    html.Div([], style={'padding':10}),
-    html.Div(html.Button(id='show-10', children='Show top 10', style = style_cell),
-            style={
-            'textAlign': 'center',
-            'color': colors['text'],
-            }),
-    html.Div([], style={'padding':10}),
-    html.Div([], id='output', style={'padding':40}),
-    html.Div([], style={'padding':10}),
     html.Div(
         children=['Timeline by country code. Check country codes at:',
                 html.Link('https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2')], 
@@ -140,6 +115,31 @@ app.layout = html.Div([
                 'padding':10}),
     html.Div([], style={'padding':10}),
     html.Div([], id='output-timeline', style={'padding':40}),
+    html.Div([], style={'padding':10}),
+    html.Div([], id='output', style={'padding':40}),
+    html.Div([], style={'padding':10}),
+    html.Div([
+        dcc.RadioItems(
+            id= 'chart-select',
+            options=[
+                {'label': 'BarChart', 'value': 'bar'},
+                {'label': 'Scatter', 'value': 'sca'},
+                {'label': 'Table', 'value': 'table'}
+            ],
+            value='bar',
+            style = style_cell
+        )  
+    ], style={
+            'textAlign': 'center',
+            'color': colors['text'],
+            }
+            ),
+    html.Div([], style={'padding':10}),
+    html.Div(html.Button(id='show-10', children='Show top 10', style = style_cell),
+            style={
+            'textAlign': 'center',
+            'color': colors['text'],
+            }),
     html.Div([], style={'padding':800}),
 ], style={'backgroundColor': colors['background']})
 
