@@ -215,7 +215,7 @@ def updateTimeline(countryCode):
                 legend={'x':1,
                         'y':0.5},
                 hovermode='x'))
-    scaChart = dcc.Graph(id='sca-plot', figure=scaFig)
+    scaChart = dcc.Graph(id='sca-timeline', figure=scaFig)
     return html.Div(children=['Showing: {}'.format(countryCode), scaChart], style={
             'textAlign': 'center',
             'color': colors['text']
