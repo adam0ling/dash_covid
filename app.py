@@ -95,7 +95,7 @@ app.layout = html.Div([
     html.Div([], style={'padding':10}),
     html.Div(
         children=['Timeline by country code. Check country codes at:',
-                html.Link('https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2')], 
+                html.A('Country code',href='https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2')], 
         style={
         'textAlign': 'center',
         'color': colors['text']
